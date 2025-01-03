@@ -92,5 +92,5 @@ regression_test
 
 К каждому тесту в отчете прилагается видео прогона.
 <p align="center">
-  <img width="70%" title="Selenoid Video" src="media/screens/video.gif">
+  <img title="Selenoid Video" src="media/screens/video.gif">
 </p>
