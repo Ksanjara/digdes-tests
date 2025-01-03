@@ -9,9 +9,9 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
+@Tag("Regression")
 public class DigDesTests extends TestBase{
 
-    @Tag("Regression")
     @DisplayName("О компании: Библиотека технических заданий содержит список документов")
     @Test
     void techLibraryContainsDocumentsTest(){
@@ -29,7 +29,6 @@ public class DigDesTests extends TestBase{
     }
 
     @Tag("Smoke")
-    @Tag("Regression")
     @DisplayName("О компании: Контакты. Проверка данных офиса в Санкт-Петербурге")
     @Test
     void spbOfficeDataCheckingTest(){
@@ -49,7 +48,6 @@ public class DigDesTests extends TestBase{
         });
     }
 
-    @Tag("Regression")
     @DisplayName("О компании: Руководство. Проверка отображения генерального директора")
     @Test
     void checkCeoNameTest(){
@@ -69,7 +67,6 @@ public class DigDesTests extends TestBase{
     }
 
     @Tag("Smoke")
-    @Tag("Regression")
     @DisplayName("Научная лаборатория: Проверка пунктов выпадающего меню")
     @Test
     void checkScienceLabMenuTest(){
@@ -86,7 +83,6 @@ public class DigDesTests extends TestBase{
         });
     }
 
-    @Tag("Regression")
     @DisplayName("Карьера: Наша команда. Страница содержит видеообращение генерального директора")
     @Test
     void ceoVideoExistsTest(){

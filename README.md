@@ -1,4 +1,8 @@
-# Проект по автоматизации тестовых сценариев для сайта компании Digital Design
+<p align="center"> 
+<img align="center" src="media/logo/logo-dd.svg" title="DigDes" width="30%"/>
+</p>
+
+# Проект по автоматизации тестовых сценариев для сайта компании [Digital Design](https://digdes.ru/)
 ## :pushpin: Содержание:
 
 - Использованный стек технологий
@@ -15,7 +19,7 @@
 <a href="https://www.java.com/"><img src="media/logo/Java.svg" width="50" height="50"  alt="Java"/></a>
 <a href="https://selenide.org/"><img src="media/logo/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>  
 <a href="https://aerokube.com/selenoid/"><img src="media/logo/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a> 
-<a href="ht[images](images)tps://github.com/allure-framework/allure2"><img src="media/logo/Allure_Report.svg" width="50" height="50"  alt="Allure"/></a> 
+<a href="https://github.com/allure-framework/allure2"><img src="media/logo/Allure_Report.svg" width="50" height="50"  alt="Allure"/></a> 
 <a href="https://gradle.org/"><img src="media/logo/Gradle.svg" width="50" height="50"  alt="Gradle"/></a> 
 <a href="https://junit.org/junit5/"><img src="media/logo/JUnit5.svg" width="50" height="50"  alt="JUnit 5"/></a>   
 <a href="https://github.com/"><img src="media/logo/GitHub.svg" width="50" height="50"  alt="Github"/></a>   
@@ -62,12 +66,12 @@ regression_test
 * <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 * <code>REMOTE_LOGIN</code> и <code>REMOTE_PASSWORD</code> – учетные данные пользователя для удаленного сервера.
 
-## <img src="media/logo/Jenkins.svg" title="Jenkins" width="4%"/> Сборка в Jenkins
+## <img src="media/logo/Jenkins.svg" title="Jenkins" width="4%"/> [Сборка](https://jenkins.autotests.cloud/job/C31-ksanjara-java_14_digdes_tests/) в Jenkins
 <p align="center">
 <img title="Jenkins Build" src="media/screens/JenkinsBuild.png">
 </p>
 
-## <img src="media/logo/Allure_Report.svg" title="Allure Report" width="4%"/> Пример Allure-отчета
+## <img src="media/logo/Allure_Report.svg" title="Allure Report" width="4%"/> [Пример](https://jenkins.autotests.cloud/job/C31-ksanjara-java_14_digdes_tests/13/allure/) Allure-отчета
 ### Overview
 
 <p align="center">
