@@ -1,40 +1,34 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.ConfigReader;
+import config.ProjectConfig;
+import config.WebConfig;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.util.Map;
+import pages.*;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
+    private static final WebConfig webConfig = ConfigReader.Instance.read();
+    MainPage mainPage = new MainPage();
+    LibraryPage libraryPage = new LibraryPage();
+    ContactsPage contactsPage = new ContactsPage();
+    ManagementPage managementPage = new ManagementPage();
+    CareerPage careerPage = new CareerPage();
 
     @BeforeAll
     static void preconditionsForAllTests() {
-        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
-        Configuration.baseUrl = "https://digdes.ru/";
-        Configuration.holdBrowserOpen = false;
-        Configuration.remote = System.getProperty("remoteUrl");
-        Configuration.browser = System.getProperty("browserName", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion");
-        Configuration.pageLoadStrategy = "eager";
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
-        Configuration.browserCapabilities = capabilities;
+        ProjectConfig projectConfiguration = new ProjectConfig(webConfig);
+        projectConfiguration.webConfig();
     }
 
     @BeforeEach
-    void preconditionForEachTest(){
+    void preconditionForEachTest() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
