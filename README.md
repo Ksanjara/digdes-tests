@@ -84,27 +84,27 @@ gradle clean test -Denv=remote
 
 ### Доска
 <p align="center">
-<img src="images/screenshots/AllureTestOpsDashboard.PNG">
+<img src="media/screens/testops_dashboard.png">
 </p>
 
 ### Тест-кейсы
 <p align="center">
-<img src="images/screenshots/AllureTestCases.PNG">
+<img src="media/screens/tc_auto.png">
 </p>
 
 ### Пример мануального тест-кейса
 <p align="center">
-<img src="images/screenshots/AllureTestOpsManualTest.PNG">
+<img src="media/screens/tc_manual.png">
 </p>
 
 ### Запуски сборок
 <p align="center">
-<img src="images/screenshots/AllureTestOpsLaunches.png">
+<img src="media/screens/tc_runs.png">
 </p>
 
 ### Запуск выбранных тестов из Allure TestOps
 <p align="center">
-<img src="images/screenshots/AllureTestOpsLaunchFromTestOps.png">
+<img src="media/screens/tc_create_run.png">
 </p>
 
 <a id="selenoid"></a>
