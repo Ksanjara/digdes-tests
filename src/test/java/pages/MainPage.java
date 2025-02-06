@@ -36,11 +36,35 @@ public class MainPage {
         return this;
     }
 
+    @Step("Открыть раздел О компании в верхнем меню")
+    public MainPage openCompanyDropdown() {
+        aboutCompanyButton.click();
+
+        return this;
+    }
+
     @Step("Проверить список пунктов выпадающего меню раздела Научная лаборатория ")
     public MainPage checkDropdownNlabPoints() {
         menuDropdown.shouldHave(text("О научной лаборатории"),
                 text("Автоматическая проверка документов"), text("Интеллектуальная обработка корреспонденции"),
                 text("Прогнозирование водно-энергетических режимов"));
+
+        return this;
+    }
+
+    @Step("Проверить список пунктов выпадающего меню раздела О компании ")
+    public MainPage checkDropdownCompanyPoints() {
+        menuDropdown.shouldHave(text("О нас"),
+                text("Пресс-центр"),
+                text("Блог"),
+                text("Мероприятия"),
+                text("Руководство"),
+                text("Партнёры"),
+                text("Лицензии и сертификаты"),
+                text("Социальные проекты"),
+                text("Правоустанавливающие документы"),
+                text("Библиотека технических заданий"),
+                text("Контакты"));
 
         return this;
     }
