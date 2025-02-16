@@ -14,7 +14,6 @@ public class LibraryPage {
     public LibraryPage checkDocumentsExistence() {
         libraryListBlock.shouldHave(text("Примеры технических заданий для наших решений"));
         documentsBlock.shouldBe(not(empty));
-
         return this;
     }
 }

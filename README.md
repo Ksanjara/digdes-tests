@@ -8,9 +8,9 @@
 - <a href="#tools">Использованный стек технологий</a>
 - <a href="#launch"> Запуск автотестов </a>
 - <a href="#build"> Сборка в Jenkins </a>
-- <a href="#allureReport"> Пример Allure-отчета </a>
+- <a href="#report"> Пример Allure-отчета </a>
 - <a href="#tg"> Уведомления в Telegram с использованием бота </a>
-- <a href="#allureOps"> Интеграция с Allure TestOps </a>
+- <a href="#testops"> Интеграция с Allure TestOps </a>
 - <a href="#selenoid"> Видео примера запуска тестов в Selenoid </a>
 
 <a id="tools"></a>
@@ -57,7 +57,7 @@ gradle clean test -Denv=remote
 <img title="Jenkins Build" src="media/screens/JenkinsBuild.png">
 </p>
 
-<a id="allureReport"></a>
+<a id="report"></a>
 ## <img src="media/logo/Allure_Report.svg" title="Allure Report" width="4%"/> [Пример](https://jenkins.autotests.cloud/job/C31-ksanjara-java_14_digdes_tests/13/allure/) Allure-отчета
 ### Overview
 
@@ -79,6 +79,8 @@ gradle clean test -Denv=remote
 <p align="center">
 <img width="70%" title="Telegram Notifications" src="media/screens/notification.png">
 </p>
+
+<a id="testops"></a>
 
 ## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="media/logo/AllureTestOps.svg"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/4545/test-cases?treeId=0)
 

@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.ConfigReader;
 import config.ProjectConfig;
@@ -10,8 +11,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import pages.*;
-
-import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
     private static final WebConfig webConfig = ConfigReader.Instance.read();
@@ -39,7 +38,7 @@ public class TestBase {
         Attach.browserConsoleLogs();
         Attach.addVideo();
 
-        closeWebDriver();
+        Selenide.closeWebDriver();
 
     }
 }

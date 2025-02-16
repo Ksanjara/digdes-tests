@@ -17,7 +17,6 @@ public class ContactsPage {
     @Step("Проверить наличие офиса в городе {0}")
     public ContactsPage checkOfficeInCity(String cityName) {
         officesBlock.shouldHave(text(cityName));
-
         return this;
     }
 
@@ -28,7 +27,6 @@ public class ContactsPage {
         firstCardPostalCodeInfo.shouldHave(text(postalCode));
         firstCardStreetAddressInfo.shouldHave(text(streetAddress));
         firstCardOpeningHoursInfo.shouldHave(text(openingHours));
-
         return this;
     }
 

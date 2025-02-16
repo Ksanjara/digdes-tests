@@ -67,9 +67,3 @@ task regression_test(type: Test) {
         includeTags("Regression")
     }
 }
-
-task do_test(type: Test) {
-        useJUnitPlatform {
-            includeTags("notready")
-        }
-}

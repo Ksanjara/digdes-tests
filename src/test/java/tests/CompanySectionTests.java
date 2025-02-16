@@ -5,6 +5,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 @DisplayName("Раздел \"О компании\"")
 @Owner("Kseniia Kuznetsova")
@@ -22,6 +24,21 @@ public class CompanySectionTests extends TestBase {
                 .openCompanyPoint("Библиотека технических заданий");
         libraryPage.checkDocumentsExistence();
     }
+
+
+    @ValueSource(strings = {
+            "Санкт-Петербург", "Москва", "Саратов"
+    })
+    @ParameterizedTest(name = "О компании: Контакты. Проверка наличия офиса в городе {0}")
+    @Story("Тестирование страницы контактов")
+    @Severity(SeverityLevel.NORMAL)
+    @Tags({@Tag("Positive"), @Tag("Smoke")})
+    void spbOfficeDataCheckingTest(String cityName) {
+        mainPage.openMainPage()
+                .openCompanyPoint("Контакты");
+        contactsPage.checkOfficeInCity(cityName);
+    }
+
 
     @DisplayName("О компании: Контакты. Проверка данных офиса в Санкт-Петербурге")
     @Story("Тестирование страницы контактов")

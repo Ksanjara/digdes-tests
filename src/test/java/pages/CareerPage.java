@@ -23,7 +23,6 @@ public class CareerPage {
     public CareerPage checkVideoFromCeo() {
         videoBlock.shouldHave(text("Обращение генерального директора"));
         video.shouldBe(visible);
-
         return this;
     }
 
@@ -38,15 +37,7 @@ public class CareerPage {
         inputCvFile.shouldBe(interactable);
         labelCvFile.shouldHave(text("Прикрепить резюме"));
         inputMessage.shouldHave(attribute("placeholder", "Сообщение")).shouldBe(visible);
-
         return this;
     }
 
-    @Step("Заполнить только необязательные поля формы обратной связи")
-    public CareerPage fillNonRequiredFieldsOnly(String desiredPosition, String message) {
-        inputVacancy.setValue(desiredPosition);
-        inputMessage.setValue(message);
-
-        return this;
-    }
 }

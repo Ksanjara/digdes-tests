@@ -8,8 +8,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
-    private final SelenideElement menuBar = $("#dd-menu"),
-            menuDropdown = $("li.dropdown.open"),
+    private final SelenideElement menuDropdown = $("li.dropdown.open"),
             aboutCompanyButton = $("#dd-menu").$(byText("О компании")),
             nlabButton = $x("//*[@id=\"dd-menu\"]/ul/li[3]"),
             careerButton = $("#dd-menu").$(byText("Карьера"));
@@ -48,7 +47,6 @@ public class MainPage {
         menuDropdown.shouldHave(text("О научной лаборатории"),
                 text("Автоматическая проверка документов"), text("Интеллектуальная обработка корреспонденции"),
                 text("Прогнозирование водно-энергетических режимов"));
-
         return this;
     }
 
@@ -65,7 +63,6 @@ public class MainPage {
                 text("Правоустанавливающие документы"),
                 text("Библиотека технических заданий"),
                 text("Контакты"));
-
         return this;
     }
 
@@ -73,7 +70,6 @@ public class MainPage {
     public MainPage openCareerPoint(String buttonName) {
         careerButton.click();
         menuDropdown.$(byText(buttonName)).click();
-
         return this;
     }
 

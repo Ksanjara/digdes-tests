@@ -15,14 +15,12 @@ public class ManagementPage {
     @Step("Открыть карточку с ФИО генерального директора")
     public ManagementPage openCeoModalCard() {
         employeeCard.$(byText(ceoPositionName)).click();
-
         return this;
     }
 
     @Step("Проверить отображение ФИО генерального директора в модальном окне")
     public ManagementPage checkCeoName(String ceoName) {
         ceoModalTitle.shouldHave(text(ceoName), text(ceoPositionName));
-
         return this;
     }
 }
