@@ -11,6 +11,7 @@
 - <a href="#report"> Пример Allure-отчета </a>
 - <a href="#tg"> Уведомления в Telegram с использованием бота </a>
 - <a href="#testops"> Интеграция с Allure TestOps </a>
+- <a href="#Jira"> Интеграция с Jira </a>
 - <a href="#selenoid"> Видео примера запуска тестов в Selenoid </a>
 
 <a id="tools"></a>
@@ -107,6 +108,15 @@ gradle clean test -Denv=remote
 ### Запуск выбранных тестов из Allure TestOps
 <p align="center">
 <img src="media/screens/tc_create_run.png">
+</p>
+
+<a id="jira"></a>
+## <img width="4%" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1401)
+
+### Задача в Jira c настроенной интеграцией с Allure TestOps
+
+<p align="center">
+<img src="media/screens/Jira.png">
 </p>
 
 <a id="selenoid"></a>
